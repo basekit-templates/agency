@@ -1,0 +1,100 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Page Content -->
+<section class="page  page--home">
+
+	{% include "includes/hero.twig" %}
+
+	<!-- Zone Content -->
+    <div id="main-scroll" class="main-content">
+
+    <div class="container">
+
+        <div class="home-flex">
+
+            <div class="home-flex-item">
+                {{widget('content', 'hometitle', {
+                    content: '<h4>Our Ethos</h4>'
+                })|raw}}
+                {{widget('content', 'homecontent', {
+                    content: '<p>At once a vital portrait of contemporary 
+                    African American life and an intensely 
+                    personal and poetic</p>'
+                })|raw}}
+            </div>
+    
+            <div class="home-flex-item">
+                {{widget('content', 'hometitle2', {
+                    content: '<h4>Our Promise</h4>'
+                })|raw}}
+                {{widget('content', 'homecontent2', {
+                    content: '<p>With articles and other varying forms 
+                    of media, we will expand opportunity 
+                    by bridging.</p>'
+                })|raw}}
+                
+            </div>
+    
+            <div class="home-flex-item">
+    
+                {{widget('profile', 'homesignup', {
+                    'profileType':'form'
+                })|raw}}
+                
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="main-zone">
+
+                {{zone('main')|raw}}
+
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="template-footer">
+
+    <div class="container">
+          {{widget('profile', 'footer-profile', { 'profileType':'socialicons' })|raw}}
+    </div>
+
+</footer>
+
+{% endblock %}
+
+
+{% block bodyscripts %}
+
+<script src="{{asset('js/hero.js')}}"></script>
+
+<!-- Smooth Scroll -->
+<script>
+    $(document).ready(function(){
+
+        $('a[href*=#]').bind('click', function(e) {
+            e.preventDefault();
+
+            var target = $(this).attr("href");
+
+            $('html, body').stop().animate({ scrollTop: $(target).offset().top}, 1000, function() {
+                location.hash = target;
+            });
+
+            return false;
+        });
+
+    });
+
+</script>
+
+{% endblock %}

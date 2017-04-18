@@ -1,0 +1,378 @@
+// -----------------------------
+// Brunch: CSS > Navigation
+// -----------------------------
+
+// Homepage Nav
+// --------------
+
+.homepage-nav .main-content .widget {
+    @media @tablet {
+        margin: 0;
+    }
+}
+
+
+.widget__extendednavigation.folder-open:after {
+    background-color: @color__feature-content--background;
+}
+
+.navigation-body {
+
+    @media @bp-1300px {
+        overflow-x: auto;
+    }
+
+    @media @mobile {
+        padding: 0;
+    }
+
+    @media @bp-1300px {
+        .navigation-list {
+
+            .navigation-list--children.extendednavigation__navigation-list {
+                background-color: #eaecee;
+            }
+        }
+    }
+}
+
+.navigation-item .item-name {
+    display: inline-block;
+    position: relative;
+    padding: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 0;
+}
+
+.navigation-item .item-name {
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;  
+        right: 0;  
+        bottom: 0;
+        background: @color-swatch3;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform .3s ease-out;
+    }
+}
+
+.navigation-item .item-name {
+    &:hover {
+        &:before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+
+// Navigation List
+// -----------------------------
+
+.navigation-list {
+    min-width: 100%;
+    margin: 0;
+}
+
+.js-folder {
+    .navigation-list {
+    }
+}
+
+
+
+// Navigation Link
+// -----------------------------
+
+
+.navigation-item .item-name {
+    padding: 8px 20px;
+
+    &:hover {
+        color: @color__navigation--text--selected;
+    }
+
+    @media @bp-1300px {
+        padding: 10px 20px;
+    }
+
+    @media @tablet {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 8px 10px;
+    }
+}
+
+
+// Selected Class
+.extendednavigation li.selected > a  {
+    color: @color__navigation--text;
+    background-color: @color__navigation-item--background--selected;
+}
+
+.navigation-item.folder .navigation-item--child a {
+    color: @color__navigation--text;
+}
+
+.extendednavigation__navigation-item.folder.selected span {
+    color: @color__navigation--text--selected;
+}
+
+.extendednavigation__navigation-item.folder.selected .selected {
+    color: @color__navigation--text--selected;
+}
+
+
+
+
+// Dropdown Menu
+// -----------------------------
+
+.navigation-item.folder {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    @media @bp-1300px {
+        position: inherit;
+    }
+}
+
+.navigation-item.folder .navigation__item-name {
+    color: @color__h4--text;
+    &:hover {
+        color: @color__h4--text;
+    }
+}
+
+.navigation-item:hover .navigation-list--children {
+    @media @bp-1300px {
+        display: none;
+    }
+}
+
+.navigation-item.folder-open .navigation-list--children {
+    @media @bp-1300px {
+        position: absolute;
+        width: 100%;
+        top: 77%;
+        .flex-display;
+        min-height: 30px;
+        box-shadow: 0 3px 4px rgba(130, 130, 130, 0.2);
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    @media @tablet {
+        top: 73%;
+    }
+}
+
+.navigation-item--child {
+    @media @bp-1300px {
+        display: inline-block;
+    }
+}
+
+.navigation-list--children {
+    display: none;
+    border: 0;
+    background-color: @color__navigation--background;
+
+    .navigation-item .item-name {
+        padding: 10px 20px;
+        @media @tablet {
+            padding: 8px 10px;
+        }
+    }
+
+    .item-name {
+        overflow: visible;
+    }
+}
+
+.navigation-list--children {
+    top: 100%!important;
+    @media @mobile {
+        top: 100%!important;
+    }
+}
+
+
+// Dropdown Menu Arrow
+// -------------------
+
+.item-name--parent {
+
+    &:after {
+        font-family: 'FontAwesome', sans-serif;
+        display: inline-block;
+        margin-left: 0.8em;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        vertical-align: middle;
+        content: "";
+        margin-left: 4px;
+        border: 5px solid transparent;
+        border-top-color: @color__navigation--text;
+        @media @bp-global-large {
+            content: "";
+            font-size: 0.8em;
+        }
+        .navigation-item.open & {
+            @media @bp-1300px {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+}
+
+
+// Burger Icon
+// -------------
+
+.navigation-toggle {
+    display: none;
+}
+
+@media @tablet {
+    .navigation-toggle {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 45px;
+        text-indent: -9999px;
+        line-height: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        outline: 0;
+        border: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch7;
+            box-shadow: 0 6px 0 @color-swatch7;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 12px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch7;
+            .transition( all, 0.5s, ease );
+        }
+    }
+    .navigation-toggle:hover {
+        border: 0;
+            &:before {
+                background: @color-swatch7;
+                box-shadow: 0 6px 0 @color-swatch7;
+            }
+            &:after {
+                background: @color-swatch7;
+            }
+    }
+    // Toggle Button Open State
+    .open & {
+        &.navigation-toggle {
+            background-color: @color-swatch3;
+            &:before {
+                margin-top: 21px;
+                background: @color-swatch7;
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .transition( all, 0.5s, ease );
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
+                background: @color-swatch7;
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                .transition( all, 0.5s, ease );
+            }
+        }
+    }
+    .navigation-body {
+        display: none;
+        .open & {
+            display: block;
+        }
+    }
+    .navigation-item {
+        width: 100%;
+    }
+}
+
+
+
+
+
+// Touch detection folder styling
+// --------------------------------
+
+
+// On devices without touch enabled, hover events will work as normal
+.no-touch {
+    .extendednavigation .navigation-item {
+        &:hover > .navigation-list--children {
+            display: block!important;
+            width: 100%;
+        }
+
+        &.folder-open .navigation-list--children {
+            display: none;
+        }
+    }
+}
+
+
+// On devices with touch enabled, hover is disabled and a JS toggle is used
+.extendednavigation .navigation-item {
+    &:hover .navigation-list--children {
+        display: none;
+    }
+
+    &.folder-open .navigation-list--children {
+        display: block;
+        width: 100%;
+    }
+}
+

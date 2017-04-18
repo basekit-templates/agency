@@ -1,0 +1,601 @@
+// -------------------------------------
+// Brunch Template: LESS > Theme
+// -------------------------------------
+
+
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+//  #Global Breakpoints
+//  #Site Styles
+//  #Page Styles
+//  #Page Default
+//  #Header
+//  #Footer
+
+
+
+
+// ------------------------------
+// #Global Breakpoints
+// ------------------------------
+
+// Page is contained and centered
+@bp-global-above-fullwidth: ~"only screen and (min-width: 1800px)";
+
+// Page displayed full width
+@bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
+
+@bp-1300px:   ~"only screen and (max-width: 1300px)";
+@bp-global-large: 	~"only screen and (min-width: 1400px)";
+@bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
+@bp-global-small: 	~"only screen and (max-width: 769px)";
+@mobile: ~"only screen and (max-width: 650px)";
+
+// When specific styles for responsive columns styles are applied
+@bp-global-columns: ~"only screen and (min-width: 478px)";
+
+
+
+// ------------------------------
+// Site Styles
+// ------------------------------
+
+
+body {
+    background-color: @color__body--background;
+}
+
+.container {
+    width: 100%;
+}
+
+.page--home {
+    margin-bottom: 60px;
+}
+
+.template-title {
+    text-align: center;
+    margin-bottom: 80px;
+    @media @tablet {
+         margin-top: 50px;
+    }
+    @media @mobile {
+        margin-bottom: 60px;
+    }
+    h1 {
+        display: inline;
+        max-width: 140px;
+        padding-bottom: 10px;
+        background: linear-gradient(@color-swatch3,@color-swatch3), linear-gradient(@color-swatch3,@color-swatch3);
+        background-size: 0, 20px 10px;
+        background-repeat: repeat-x;
+        background-position: 0 100%;
+        text-align: center;
+        color: @color-swatch2;
+        @media @tablet {
+            font-size: bkscale(@font__h1--font-size, 0.8);
+            line-height: bkscale(@font__h1--line-height, 0.7);
+        }
+        @media @mobile {
+            font-size: bkscale(@font__h1--font-size, 0.6);
+            line-height: bkscale(@font__h1--line-height, 0.5);
+            background-size: 0, 20px 6px;
+        }
+    }
+}
+
+// Main
+.main-content {
+    position: relative;
+    background-color: @color__container--background;
+    height: 110%;
+    top: -75px;
+    padding-bottom: 100px;
+
+    .container {
+        padding-top: 5%;
+        margin: 0 auto;
+        padding-left: 10%;
+        padding-right: 10%;
+        background-color: @color-swatch3;
+        max-width: 100%;
+        @media @bp-1300px { 
+            padding: 7% 40px 0;
+        }
+        @media @tablet {
+            padding-left: 4%;
+            padding-right: 4%;
+        }
+    }
+
+}
+
+.main-zone {
+    padding: 2% 10%;
+    @media @bp-1300px { 
+        padding: 5% 40px 0;
+    }
+    @media @tablet {
+        padding: 5% 4% 0;
+    }
+}
+
+.home-flex {
+    .flex-display(@display: flex);
+    .align-items(@align: center);
+
+    background-color: @color-swatch3;
+    margin: 0px auto;
+    padding: 0 0 3%;
+    h1, h2, h3, h4, p, a {
+        color: white;
+    }
+
+    @media @mobile {
+        display: block;
+    }
+    &:before {
+        content: "";
+        display: block;
+        background: -webkit-gradient(linear,left top,left bottom,from(@color-swatch3),to(@color-swatch3));
+        background: -webkit-linear-gradient(top,@color-swatch3,@color-swatch3);
+        background: -moz-linear-gradient(top,@color-swatch3,@color-swatch3);
+        background: -ms-linear-gradient(top,@color-swatch3,@color-swatch3);
+        background: -o-linear-gradient(top,@color-swatch3,@color-swatch3);
+        -webkit-transform: skewY(-2deg);
+        -ms-transform: skewY(-2deg);
+        transform: skewY(-2deg);
+        height: 90px;
+        background-color: @color-swatch3;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30px;
+        z-index: 14;
+        @media @mobile {
+            height: 56px;
+        }
+    }
+}
+
+.home-flex-item {
+    .flex-order(@order: 1);
+    .flex(1 1 33.3%);
+    .align-self(@align: auto);
+    margin-right: 80px;
+
+    background-color: @color-swatch3;
+    z-index: 999999;
+
+    .signupform__form-group {
+        &:first-child {
+            width: 100%;
+        }
+    }
+
+    .profile .input {
+        max-width: 100%;
+    }
+
+    .profile .legend {
+        color: white;
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
+        font-family: @font__h4--font-family;
+    }
+
+    .signupform__button {
+        padding: 10px 16px;
+        margin: 0;
+        color: white;
+        background-color: lighten(@color__button--background--hover, 3%);
+        &:before {
+            background-color: darken(@color__button--background--hover, 3%);
+        }
+        &:hover {
+            box-shadow:300px 0 0 0 darken(@color__button--background--hover, 3%) inset;
+        }
+    }
+
+    @media @bp-1300px {
+        margin-right: 50px;
+    }
+
+    @media @tablet {
+        margin-right: 10px;
+    }
+
+    @media @mobile {
+        display: block;
+        padding-bottom: 30px;
+        &:first-child {
+            padding-top: 60px;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// #Page Default
+// ------------------------------
+
+.page--default {
+    .template-header {
+        background-color: @color__footer--background;
+        position: relative;
+        padding: 30px 40px 160px;
+        z-index: 0;
+        &:before {
+            content: "";
+            display: block;
+            background: -webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#f2f2f2));
+            background: -webkit-linear-gradient(top,#f2f2f2,#f2f2f2);
+            background: -moz-linear-gradient(top,#f2f2f2,#f2f2f2);
+            background: -ms-linear-gradient(top,#f2f2f2,#f2f2f2);
+            background: -o-linear-gradient(top,#f2f2f2,#f2f2f2);
+            -webkit-transform: skewY(-2deg);
+            -ms-transform: skewY(-2deg);
+            transform: skewY(-2deg);
+            height: 100px;
+            background-color: #f2f2f2;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        @media @tablet {
+            padding: 40px 40px 160px;
+        }
+        @media @mobile {
+            padding: 30px 40px 160px;
+        }
+        .flex-item:first-child {
+            .flex-display(@display: flex);
+            .align-items(@align: center);
+
+            @media @tablet {
+                width: 100%;
+            }
+        }
+        .flex-item {
+            @media @tablet {
+                &:last-child {
+                    display: block!important;
+                }
+            }
+            @media @mobile {
+                &:last-child {
+                    text-align: center;
+                }
+            }
+        }
+        .profile {
+            .button {
+                top: 0;
+                @media @tablet {
+                    line-height: 40px;
+                }
+                @media @mobile {
+                    line-height: 42px;
+                }
+            }
+            .input {
+                color: @color__container--background;
+            }
+        }
+        .company-link {
+            color: @font-swatch10-color;
+        }
+        .container {
+            @media @tablet {
+                padding: 0;
+            }
+        }
+        .widget__logo {
+            margin: 10px!important;
+        }
+    }
+    .homepage-nav {
+        z-index: 3;
+        @media @bp-1300px {
+            margin: -123px auto 0
+        }
+        @media @mobile {
+            padding: 0;
+        }
+    }
+    .main-content {
+        margin-top: 20px;
+        .container {
+            padding-top: 2%;
+        }
+        @media @mobile {
+            margin-top: 0;
+        }
+    }
+    .template-title {
+        @media @tablet {
+            margin-top: 20px;
+        }
+        @media @mobile {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// #Header
+// ------------------------------
+
+.template-header {
+    position: absolute;
+    top: 0;
+    z-index: 12;
+    max-width: 100%;
+    padding: 20px 10%;
+    width: 100%;
+
+    @media @bp-global-below-fullwidth {
+        width: 100%;
+    }
+    @media @bp-1300px { 
+        padding: 20px 40px;
+    }
+    @media @tablet {
+        border: 0;
+        padding: 20px 4%;
+    }
+    @media @mobile {
+        order: 1;
+        padding: 10px 4%;
+    }
+
+    // Container
+	.container {
+		.flex-display;
+		.justify-content(space-between);
+        .align-items(center);
+	}
+
+    // Flex Item
+    .flex-item {
+        &:first-child {
+            min-width: 200px;
+        }
+        &:last-child {
+
+        }
+        @media @tablet {
+            background-color: transparent;
+            border: 0;
+
+            &:first-child,
+            &:last-child {
+                @media @medium {
+                    width: 50%;
+                }
+            }
+        }
+        @media @mobile {
+
+        }
+    }
+}
+
+
+// Hiding Feature Styles
+// ----------------------------------------
+
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .profile .button {
+    top: 0px;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-logo {
+    background-color: @color-swatch3;
+    position: relative;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero {
+    height: 100%;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    background-color: @color-swatch3;
+}
+
+
+// Header: Additional
+// ------------------------------
+
+// For default page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    position: relative;
+    z-index: inherit;
+    width: 100%;
+    background-color: @color__footer--background;
+    min-height: auto;
+    border-bottom: 1px solid darken(@color__container--background, 10%);
+    z-index: 99;
+
+
+    // Flex Item
+    @media @mobile {
+        .flex-item:first-child,
+        .flex-item:last-child {
+            background-color: darken(@color__container--background, 4%);
+            border-bottom: 1px solid darken(@color__container--background, 10%);
+        }
+    }
+
+    // Profile Widget
+    .profile {
+
+        p, h2, h3,
+        .phone-number-link,
+        .company-link,
+        .social-link:before,
+        .emailaddress__email,
+        .button {
+            color: @color__companyname--text;
+        }
+
+        // Twitter
+        .tweet-content a {
+            color: white;
+        }
+
+         // Email
+        .emailaddress__email {
+            @media @tablet {
+                color: transparent;
+
+                &:before {
+                    color: @color__h2--text;
+                }
+            }
+        }
+
+        // Form
+        .input {
+            color: @color__h2--text;
+            border-color: darken(@color__container--background, 10%);
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+
+        // Button
+        .button {
+            position: relative;
+            top: 1px;
+            margin-top: 0;
+            padding: 0 10px;
+            border-left: 0;
+            border-right: 1px solid darken(@color__container--background, 10%);
+        }
+
+    }
+
+    // Navigation Toggle Button
+    .navigation-toggle {
+        background-color: @color__navigation--text;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .open .navigation-toggle {
+        background-color: transparent;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .page--default .template-header .profile .tweet-content a {
+        color: #595959;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Footer
+// ------------------------------
+
+
+.page--default {
+    .footer-container {
+        @media @tablet {
+            padding: 90px 20px 50px!important;
+        }
+        @media @mobile {
+            padding: 90px 20px 50px!important;
+        }
+    }
+}
+
+// Footer Container
+.footer-container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    display: block;
+    h3 {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    @media @tablet {
+        max-width: 100%;
+    }
+    @media @mobile {
+        max-width: 100%;
+        display: block;
+        padding: 50px 20px;
+    }
+}
+
+// Footer content 
+.footer-content-1 {
+    margin-bottom: 10px;
+}
+
+
+// Template Footer
+.template-footer {
+    width: 100%;
+    background-color: @color__footer--background;
+    text-align: center;
+
+    .social-item {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    // Widget
+    .widget {
+        padding: 20px 40px;
+        @media @bp-global-small {
+            padding: 20px 20px;
+        }
+        @media @mobile {
+            padding: 10px 10px;
+        }
+    }
+}
+
+// Fixes overlay issue in the editor when trying to edit the content widget above the footer.
+
+.footer-container .widget-overlay {
+    z-index: 999;
+}
