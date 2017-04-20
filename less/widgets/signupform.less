@@ -9,6 +9,10 @@
 
     margin-top: 100px;
 
+    @media @mobile {
+        margin-top: 60px;
+    }
+
         &:before {
             content: "";
             display: block;
@@ -42,14 +46,14 @@
         width: 100%;
         padding: 15px 40px 0px 40px;
         z-index: 9999;
+        @media @bp-global-small {
+            padding: 0px 20px 0px 20px;
+        }
     }
 
 
     label {
         padding-top: 10px;
-        @media @tablet {
-            text-align: center;
-        }
     }
 
 
@@ -74,6 +78,7 @@
         }
         @media @mobile {
             display: block;
+            padding: 50px 20px 20px 20px;
         }
     }
 
@@ -98,7 +103,6 @@
         &:first-child {
             .flex(@columns: 1 1 auto);
 
-            margin-right: 10px;
             @media @mobile {
                 margin-bottom: 20px;
             }
@@ -120,9 +124,8 @@
 
     .form-group:last-of-type {
         margin: 0;
-        @media @tablet {
+        @media @bp-global-small {
             display: block;
-            text-align: center;
         }
     }
 

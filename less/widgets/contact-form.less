@@ -66,7 +66,7 @@
     	padding: 60px 40px 40px 40px;
     
         @media @bp-global-small {
-            padding: 60px 40px 30px 40px;
+            padding: 60px 20px 20px 20px;
             width: 100%;
         }
     }
@@ -88,6 +88,9 @@
         width: 100%;
         padding: 15px 40px 0px 40px;
         z-index: 9999;
+        @media @mobile {
+            padding: 0 20px 0 20px;
+        }
     }
     
     
@@ -113,9 +116,7 @@
     .input,
     .textarea {
         background-color: #fff;
-        border-bottom: 0;
         padding: 10px;
-        border: 1px solid #F3F1F1;
         &:focus {
             border-color: #DEDDDD;
             box-shadow: none;
@@ -141,13 +142,63 @@
 
 .widget__advancedcontactform {
     background-color: @color__form--background;
-    padding: 20px;
+    margin-top: 100px;
+
+    @media @bp-global-small {
+        margin-top: 80px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        background: -webkit-linear-gradient(@color__form--background, @color__form--background);
+        background: -o-linear-gradient(@color__form--background, @color__form--background);
+        background: linear-gradient(@color__form--background, @color__form--background);
+        -webkit-transform: skewY(-2deg);
+        -ms-transform: skewY(-2deg);
+        transform: skewY(-2deg);
+        height: 80px;
+        background-color: @color__form--background;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 14;
+        margin-top: -40px;
+    }
+
     .legend {
-        color: @color__h2--text;
+        position: absolute;
+        top: 0;
+        color: @color__form-legend--text;
+        background-color: @color__form-legend--background;
         font-family: @font__h2--font-family;
         font-size: @font__h2--font-size;
         line-height: @font__h2--line-height;
-    }   
+        width: 100%;
+        z-index: 9999;
+        padding: 15px 40px 0px 40px;
+        @media @bp-global-small {
+            padding: 0px 20px 0px 20px;
+        }
+    }
+
+    .form-body {
+        padding: 80px 40px 40px 40px;
+        @media @bp-global-small {
+            padding: 60px 20px 40px 20px;
+        }
+    }
+
+    .button {
+        background-color: darken(@color__button--background, 5%);
+        padding: 10px 26px;
+        margin: 0;
+    }
+
+    .select-wrap {
+        background-color: white;
+    }
+
 }
 
 

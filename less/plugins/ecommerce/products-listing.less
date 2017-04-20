@@ -5,19 +5,7 @@
 
 .ecomproductslist {
     background-color: #fff;
-    .box-shadow;
 
-
-    // Product Listing Title
-    // ------------------------------
-    
-    
-    .listing-title {
-        display: none;
-    }
-    
-    
-    
     
     // ------------------------------
     // Product Listing Filters
@@ -34,7 +22,7 @@
         .flex-display(@display: flex);
         .align-content(@align: flex-end);
         .align-items(@align: flex-end);
-        padding: 30px;
+        margin-bottom: 40px;
     
         @media (max-width: 1024px) {
             display: block;
@@ -71,7 +59,6 @@
     // ------------------------------
     
     .product-filters {
-        border-bottom: 1px solid darken(@color__container--background, 10%);
     
         .form-group {
             margin-right: 0;
@@ -320,16 +307,15 @@
         padding-left: 14px;
         box-shadow: none;
         background-color: transparent;
-        box-shadow: inset 0px -1px 0px 0px #ededef;
         font-size: 14px;
         font-weight: 300;
         color: black;
         letter-spacing: inherit;
+        height: 52px;
     }
 
 
     .button--submit {
-        line-height: 44px;
 
         @media @bp-global-medium {
             width: 50px;
@@ -337,6 +323,7 @@
             display: block;
             position: relative;
             padding: 0;
+            height: 52px;
 
             &:after {
                 content: '\f002';
@@ -344,9 +331,8 @@
                 position: absolute;
                 text-align: center;
                 line-height: 44px;
-                color: @color__button--text;
                 font-size: 18px;
-                top: 0;
+                top: 5px;
                 left: 0;
                 bottom: 0;
                 right: 0;
@@ -389,18 +375,13 @@
 
 
 .product-list {
-
-    padding: 20px;
-
     .flex-display(@display: flex);
     .flex-direction(@direction: row);
     .flex-wrap(@wrap: wrap);
-    .justify-content(@justify: flex-start);
-    .align-content(@align: stretch);
-    .align-items(@align: stretch);
+    .justify-content(@justify: space-between);
+    .align-content(@align: space-between);
+    .align-items(@align: flex-start);
 }
-
-
 
 
 // Product Item
@@ -408,7 +389,6 @@
 
 
 .product-item {
-    padding: 20px;
 
     // Clickable item, class added via JS
 
@@ -440,7 +420,7 @@
     // Product Item
 
     .product-item {
-        width: 33.333%;
+        width: 32%;
         margin: 0;
     }
 }
@@ -453,7 +433,7 @@
     // Product Item
 
     .product-item {
-        width: 33.33%;
+        width: 32%;
     }
 }
 
@@ -465,7 +445,7 @@
     // Product Item
 
     .product-item {
-        width: 50%;
+        width: 48%;
     }
 }
 
@@ -492,6 +472,8 @@
 .product-item-image  {
     background-color: transparent;
     width: auto;
+    height: 100%;
+    line-height: 100%;
     @media @mobile {
         line-height: 1;
         height: auto;
@@ -510,6 +492,8 @@
 
 .product-item-image .image-link {
     background-color: transparent;
+    height: 100%;
+    line-height: 100%;
     @media @mobile {
         line-height: 1;
         height: auto;
@@ -526,6 +510,12 @@
 
 .product-item-details {
     text-align: center;
+    background-color: #eeeeee;
+    padding: 10px 20px;
+    margin: 20px 0;
+
+    .flex-display(@display: flex);
+    .align-items(@align: center);
 
     @media @mobile {
         padding-top: 0;
@@ -537,14 +527,10 @@
 // Item Title
 
 .product-item-title {
-    font-size: @font__h3--font-size;
-    line-height: @font__h3--line-height;
-    text-align: center;
-
-    @media @bp-global-small {
-        font-size: bkscale(@font__h3--font-size, 0.8);
-        line-height: bkscale(@font__h3--line-height, 0.8);
-    }
+    font-size: @font__h4--font-size;
+    line-height: @font__h4--line-height;
+    text-align: left;
+    
      // Title Links
 
     .title-link {
@@ -555,7 +541,9 @@
 
 // Product Price
 .product-item-price {
-    text-align: center;
+    .flex-display(@display: flex);
+    .justify-content(@justify: flex-end);
+    .flex(1 1 auto);
 }
 
 

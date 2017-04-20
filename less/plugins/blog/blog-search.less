@@ -11,40 +11,45 @@
 
 .widget__blogsearch {
 
-    margin-top: 50px;
+    margin-top: 100px;
+
+    @media @bp-global-small {
+        margin-top: 60px;
+    }
+
+        &:before {
+            content: "";
+            display: block;
+            background: -webkit-linear-gradient(@color__form--background, @color__form--background);
+            background: -o-linear-gradient(@color__form--background, @color__form--background);
+            background: linear-gradient(@color__form--background, @color__form--background);
+            -webkit-transform: skewY(-2deg);
+            -ms-transform: skewY(-2deg);
+            transform: skewY(-2deg);
+            height: 80px;
+            background-color: @color__form--background;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 14;
+            margin-top: -40px;
+        }
 
     // Legend
 
     .legend {
-        position: relative;
-        top: 20px;
-        right: 0;
+        position: absolute;
+        top: 0;
         color: @color__form-legend--text;
         background-color: @color__form-legend--background;
-        height: 50px;
         font-family: @font__h2--font-family;
         font-size: @font__h2--font-size;
         line-height: @font__h2--line-height;
-        text-align: right;
-        text-align: center;
-        line-height: 50px;
-        text-indent: -9999px;
         width: 100%;
-        .box-shadow;
-        &:before {
-            content:"\f002";
-            width: 100%;
-            height: 100%;
-            font-family: 'FontAwesome', sans-serif;
-            display: block;
-            position: absolute;
-            top: 0px;
-            font-size: 16px;
-            font-weight: bold;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            color: white;
-            text-indent: 0;
+        padding: 15px 40px 0px 40px;
+        z-index: 9999;
+        @media @bp-global-small {
+            padding: 0px 20px 0px 20px;
         }
     }
 
@@ -63,7 +68,7 @@
 
         @media @bp-global-small {
             width: 100%;
-            padding: 50px 30px 30px 30px;
+            padding: 50px 20px 20px 20px;
         }
     }
 
@@ -73,7 +78,6 @@
         margin-bottom: 0;
         &:first-child {
             .flex(1 1 auto);
-            margin-right: 10px;
         }
 
         &:last-child {
@@ -89,14 +93,6 @@
 
     }
 
-    // First Form Group
-
-    .blogsearch__form-group:first-child {
-        @media @mobile {
-            margin-right: 3px; // LESS Framework reset
-        }
-    }
-
     // Last Form Group
 
     .form-group:last-child {
@@ -106,9 +102,9 @@
     // Button
 
     .button {
-        @media @tablet {
-            padding: 4px 20px; 
-        }   
+        background-color: darken(@color__button--background, 5%);
+        padding: 10px 26px;
+        margin: 0;
     }
 }
 

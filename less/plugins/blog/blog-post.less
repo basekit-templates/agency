@@ -5,7 +5,7 @@
 .blogpost__post-image {
     max-width: 35%;
     margin-left: 65%;
-    @media @tablet {
+    @media @bp-global-small {
         max-width: 100%;
         margin-left: 0;
     }
@@ -17,7 +17,7 @@
     max-width: 60%;
     top: 0;
     margin: 0;
-        @media @tablet {
+        @media @bp-global-small {
         max-width: 100%;
         position: relative;
         margin-bottom: 20px;
@@ -27,7 +27,7 @@
 .blogpost__post-footer {
     margin-left: 65%;
     max-width: 35%;
-        @media @tablet {
+        @media @bp-global-small {
         max-width: 100%;
         margin-left: 0;
     }
@@ -40,7 +40,7 @@
         padding: 20px;
         margin-top: 20px;
         margin-bottom: 0;
-        @media @tablet {
+        @media @bp-global-small {
             margin: 0;
         }
     }
@@ -53,5 +53,14 @@
 }
 
 .network-item {
+    margin-bottom: 10px;
+}
+
+.blogpost__category-link,
+.blogpost__tag-link {
+    .underline;
+}
+
+.post-category {
     margin-bottom: 10px;
 }
