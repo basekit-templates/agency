@@ -55,3 +55,24 @@ $(document).ready(function() {
         }
     });
 });
+
+// Toggles class open to display/hide the whole navigation
+$( ".navigation-toggle" ).click(function() {
+    $( "body" ).toggleClass( "nav-open" );
+});
+
+function closeEverything() {
+    $( ".widget__extendednavigation" ).removeClass( "open" );;
+    $( "body" ).removeClass( "basket-open" );
+    $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+    $( ".navigation-item.folder" ).removeClass( "open" );
+}
+
+
+// On ESC key
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        closeEverything();
+    }
+};

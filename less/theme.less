@@ -149,6 +149,7 @@ body {
         right: 0;
         top: 30px;
         z-index: 14;
+        box-shadow: 0 -7px 20px rgba(0, 0, 0, .05);
         @media @mobile {
             height: 56px;
         }
@@ -347,7 +348,6 @@ body {
     @media @bp-global-small {
         border: 0;
         padding: 20px 4%;
-        text-align: center;
     }
     @media @mobile {
         order: 1;
@@ -376,16 +376,12 @@ body {
         @media @bp-global-small {
             background-color: transparent;
             border: 0;
+            display: inline-block;
 
             &:first-child,
             &:last-child {
-                @media @medium {
-                    width: 50%;
-                }
-            }
-        }
-        @media @mobile {
 
+            }
         }
     }
 }
