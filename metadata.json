@@ -159,7 +159,7 @@
             "color__p--text": "@color-swatch5"
         },
         "header": {
-            "color__header--background" : "transparent"
+            "color__header--background" : "lighten(@color-swatch3,5%)"
         },
         "footer": {
             "color__footer--background" : "@color-swatch4"
@@ -173,6 +173,7 @@
             "color__navigation--text": "#fff",
             "color__navigation--text--selected": "#ffffff",
             "color__navigation--background": "transparent",
+            "color__navigation-list--background" : "@color-swatch3",
             "color__navigation-item--background--selected": "@color-swatch3"
         },
         "form": {

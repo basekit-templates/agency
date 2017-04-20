@@ -10,55 +10,57 @@
 	<!-- Zone Content -->
     <div id="main-scroll" class="main-content">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="home-flex">
+            <div class="home-flex">
 
-            <div class="home-flex-item">
-                {{widget('content', 'hometitle', {
-                    content: '<h4>Our Ethos</h4>'
-                })|raw}}
-                {{widget('content', 'homecontent', {
-                    content: '<p>At once a vital portrait of contemporary 
-                    African American life and an intensely 
-                    personal and poetic</p>'
-                })|raw}}
+                <div class="home-flex-item">
+                    {{widget('content', 'hometitle', {
+                        content: '<h4>Our Ethos</h4>'
+                    })|raw}}
+                    {{widget('content', 'homecontent', {
+                        content: '<p>At once a vital portrait of contemporary 
+                        African American life and an intensely 
+                        personal and poetic</p>'
+                    })|raw}}
+                </div>
+        
+                <div class="home-flex-item">
+                    {{widget('content', 'hometitle2', {
+                        content: '<h4>Our Promise</h4>'
+                    })|raw}}
+                    {{widget('content', 'homecontent2', {
+                        content: '<p>With articles and other varying forms 
+                        of media, we will expand opportunity 
+                        by bridging.</p>'
+                    })|raw}}
+                    
+                </div>
+        
+                <div class="home-flex-item">
+        
+                    {{widget('profile', 'homesignup', {
+                        'profileType':'form'
+                    })|raw}}
+                    
+                </div>
+
+            </div> 
+
             </div>
-    
-            <div class="home-flex-item">
-                {{widget('content', 'hometitle2', {
-                    content: '<h4>Our Promise</h4>'
-                })|raw}}
-                {{widget('content', 'homecontent2', {
-                    content: '<p>With articles and other varying forms 
-                    of media, we will expand opportunity 
-                    by bridging.</p>'
-                })|raw}}
-                
-            </div>
-    
-            <div class="home-flex-item">
-    
-                {{widget('profile', 'homesignup', {
-                    'profileType':'form'
-                })|raw}}
-                
+
+                <div class="main-zone">
+
+                    {{zone('main')|raw}}
+
+                </div>
+
             </div>
 
         </div>
 
-        </div>
-
-        <div class="main-zone">
-
-                {{zone('main')|raw}}
-
-            </div>
-
-            </div>
-
-        </div>
     </div>
+
 </section>
 
 <!-- Footer -->

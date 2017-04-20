@@ -2,6 +2,9 @@
 // Brunch: CSS > Navigation
 // -----------------------------
 
+
+
+
 // Homepage Nav
 // --------------
 
@@ -10,7 +13,6 @@
         margin: 0;
     }
 }
-
 
 .widget__extendednavigation.folder-open:after {
     background-color: @color__feature-content--background;
@@ -63,6 +65,9 @@
 .navigation-list {
     min-width: 100%;
     margin: 0;
+    @media @bp-global-small {
+        background-color: @color__navigation-list--background;
+    }
 }
 
 .js-folder {
@@ -223,6 +228,7 @@
         border-radius: 0;
         outline: 0;
         border: 0;
+        background-color: transparent;
         &:before {
             content: '';
             position: absolute;
@@ -233,8 +239,8 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
-            box-shadow: 0 6px 0 @color-swatch7;
+            background: #fff;
+            box-shadow: 0 6px 0 #fff;
             .transition( all, 0.5s, ease );
         }
         &:after {
@@ -247,27 +253,28 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
+            background: #fff;
             .transition( all, 0.5s, ease );
         }
     }
     .navigation-toggle:hover {
         border: 0;
+        background-color: transparent;
             &:before {
-                background: @color-swatch7;
-                box-shadow: 0 6px 0 @color-swatch7;
+                background: #fff;
+                box-shadow: 0 6px 0 #fff;
             }
             &:after {
-                background: @color-swatch7;
+                background: #fff;
             }
     }
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color-swatch3;
+            background-color: transparent;
             &:before {
                 margin-top: 21px;
-                background: @color-swatch7;
+                background: #fff;
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -286,7 +293,7 @@
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
-                background: @color-swatch7;
+                background: #fff;
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
