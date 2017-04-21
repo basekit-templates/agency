@@ -174,10 +174,35 @@ body {
     background-color: @color-swatch3;
     z-index: 3;
 
-    .signupform__form-group {
-        &:first-child {
-            width: 100%;
+    h1, h2, h3, h4, h5, p, a, span {
+        color: white;
+    }
+
+    // Twitter 
+
+    .twitter__avatar {
+        display: none;
+    }
+
+    .twitter__tweet-content {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    // Social 
+
+    .social-link {
+        background-color: transparent;
+        &:before {
+            width: 20px;
+            height: 20px;
+            color: white;
+            line-height: 20px;
         }
+    }
+
+    .social-item {
+        margin-bottom: 0;
     }
 
     .profile .input {
@@ -189,6 +214,14 @@ body {
         font-size: @font__h4--font-size;
         line-height: @font__h4--line-height;
         font-family: @font__h4--font-family;
+    }
+
+    // Sign Up Form
+
+    .signupform__form-group {
+        &:first-child {
+            width: 100%;
+        }
     }
 
     .signupform__button {
