@@ -1,10 +1,10 @@
 {
-    "name":"Brunch",
+    "name":"Agency",
     "widgetVersion": 2,
-    "thumbnail":"brunch.png",
+    "thumbnail":"agency.png",
     "templateType":"standard",
     "pageTypes": [ "home", "default" ],
-    "screenshot":"brunch-screenshot.jpg",
+    "screenshot":"agency-screenshot.jpg",
      "images":[
         "images/image-1.jpg",
         "images/logo.png",
