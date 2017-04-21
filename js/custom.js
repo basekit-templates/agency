@@ -57,7 +57,7 @@ $(document).ready(function() {
 });
 
 // Toggles class open to display/hide the whole navigation
-$( ".navigation-toggle" ).click(function() {
+$( ".nav-toggle" ).click(function() {
     $( "body" ).toggleClass( "nav-open" );
 });
 
