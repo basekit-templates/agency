@@ -1,5 +1,5 @@
 // -------------------------------------
-// Brunch Template: JS > Navigation
+// Agency Template: JS > Navigation
 // -------------------------------------
 
 $(document).each(function() {

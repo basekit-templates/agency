@@ -1,5 +1,5 @@
 // -------------------------------------
-// Brunch Template: LESS > Theme
+// Agency Template: LESS > Theme
 // -------------------------------------
 
 
@@ -134,11 +134,11 @@ body {
     &:before {
         content: "";
         display: block;
-        background: -webkit-gradient(linear,left top,left bottom,from(@color-swatch3),to(@color-swatch3));
-        background: -webkit-linear-gradient(top,@color-swatch3,@color-swatch3);
-        background: -moz-linear-gradient(top,@color-swatch3,@color-swatch3);
-        background: -ms-linear-gradient(top,@color-swatch3,@color-swatch3);
-        background: -o-linear-gradient(top,@color-swatch3,@color-swatch3);
+        background: -webkit-gradient(linear,left top,left bottom,from(@color__feature-content--background),to(@color-swatch3));
+        background: -webkit-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
+        background: -moz-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
+        background: -ms-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
+        background: -o-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
         -webkit-transform: skewY(-2deg);
         -ms-transform: skewY(-2deg);
         transform: skewY(-2deg);
@@ -171,7 +171,7 @@ body {
     .align-self(@align: auto);
     margin-right: 80px;
 
-    background-color: @color-swatch3;
+    background-color: @color__feature--background;
     z-index: 3;
 
     h1, h2, h3, h4, h5, p, a, span {
@@ -267,33 +267,34 @@ body {
 
 .page--default {
     .template-header {
-        background-color: @color__header--background;
+        background-color: @color__feature-content--background;
         position: relative;
-        padding: 30px 10% 120px;
+        padding: 30px 10% 60px;
         z-index: 0;
+        z-index: 99;
         &:before {
             content: "";
             display: block;
-        background: -webkit-gradient(linear,left top,left bottom,from(@color-swatch3),to(@color-swatch3));
-        background: -webkit-linear-gradient(top,@color-swatch3,@color-swatch3);
-        background: -moz-linear-gradient(top,@color-swatch3,@color-swatch3);
-        background: -ms-linear-gradient(top,@color-swatch3,@color-swatch3);
-        background: -o-linear-gradient(top,@color-swatch3,@color-swatch3);
+            background: -webkit-gradient(linear,left top,left bottom,from(@color__feature--background),to(@color__feature--background));
+        background: -webkit-linear-gradient(top,@color__feature--background,@color__feature--background);
+        background: -moz-linear-gradient(top,@color__feature--background,@color__feature--background);
+        background: -ms-linear-gradient(top,@color__feature--background,@color__feature--background);
+        background: -o-linear-gradient(top,@color__feature--background,@color__feature--background);
             -webkit-transform: skewY(-2deg);
             -ms-transform: skewY(-2deg);
             transform: skewY(-2deg);
-            height: 100px;
+            height: 90px;
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 0;
-            z-index: 2;
+            bottom: -45px;
+            @media @bp-global-small {
+                height: 40px;
+                bottom: -20px;
+            }
         }
         @media @bp-global-small {
-            padding: 40px 40px 160px;
-        }
-        @media @mobile {
-            padding: 30px 40px 160px;
+            padding: 40px 40px 70px;
         }
         .flex-item:first-child {
             .flex-display(@display: flex);
@@ -341,6 +342,9 @@ body {
             margin: 10px!important;
         }
     }
+    .navigation-list .navigation-list--children {
+        background-color: @color__feature--background;
+    }
     .homepage-nav {
         z-index: 3;
         @media @bp-1300px {
@@ -351,13 +355,14 @@ body {
         }
     }
     .main-content {
-        margin-top: 20px;
+        margin-top: 80px;
+        top: 0;
         .container {
             padding-top: 2%;
             background-color: @color__container--background;
         }
-        @media @mobile {
-            margin-top: 0;
+        @media @bp-global-small {
+            margin-top: 40px;
         }
     }
     .template-title {

@@ -6,21 +6,7 @@
 
 
     <!-- Header -->
-    <header class="template-header">
-        <div class="container">
-            <div class="flex-item">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {
-                "business": "profile",
-                "showTplWidget":"0"
-                })|raw}}
-            </div>
-            <div class="flex-item">
-                {{widget('extendednavigation', 'extendednavigation', 
-            {"align":"center"})|raw}}
-            </div>
-        </div>
-    </header>
+    {% include "includes/header.twig" %}
 
     <!-- Zone Content -->
     <div class="main-content">

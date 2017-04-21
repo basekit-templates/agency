@@ -39,21 +39,6 @@ $(document).ready(function() {
             );
       }
     });
-
-    // Ecom Gallery Scrolling
-
-    $('#ecomscroll').click(function(e) {
-        e.preventDefault();
-        var id = e.target.id;
-        if(id == 'ecomscroll')
-        {
-            $('ul.product-gallery li:first').appendTo('ul.product-gallery');
-        }
-            else
-        {
-            $('ul.product-gallery li:last').prependTo('ul.product-gallery');
-        }
-    });
 });
 
 // Toggles class open to display/hide the whole navigation

@@ -1,3 +1,11 @@
+// -------------------------------------
+// Agency Template: LESS > Navigation
+// -------------------------------------
+
+
+// Navigation Item
+// -----------------------------
+
 
 .navigation-item {
     display: inline-block;
@@ -31,16 +39,21 @@
     }
 }
 
-.navigation-list--children .navigation-item--child {
-    margin: 0;
-}
-
 .navigation-item .item-name {
     &:hover {
         &:before {
             transform: scaleX(1);
         }
     }
+}
+
+
+// Navigation Children
+// -----------------------------
+
+
+.navigation-list--children .navigation-item--child {
+    margin: 0;
 }
 
 .navigation-list--children {
@@ -127,8 +140,39 @@
 
 }
 
+// Touch detection folder styling
+// --------------------------------
 
 
+// On devices without touch enabled, hover events will work as normal
+.no-touch {
+    .extendednavigation .navigation-item {
+        &:hover > .navigation-list--children {
+            display: block!important;
+            width: 100%;
+        }
+
+        &.folder-open .navigation-list--children {
+            display: none;
+        }
+    }
+}
+
+
+// On devices with touch enabled, hover is disabled and a JS toggle is used
+.extendednavigation .navigation-item {
+    &:hover .navigation-list--children {
+        display: none;
+    }
+
+    &.folder-open .navigation-list--children {
+        display: block;
+        width: 100%;
+    }
+}
+
+// Responsive Navigation
+// -----------------------------
 
 
 @media @bp-global-small {
@@ -153,7 +197,7 @@
             &:before{
                 width: 1200px;
                 height: 1200px;
-                background-color: fade(#4A75E6, 95%);
+                background-color: fade(@color__navigation-list--background, 95%);
             }
             .icon{
                 width: 0;
@@ -175,6 +219,8 @@
         position: fixed;
     }
 
+    // Navigation Toggle
+
     .nav-toggle {
         width: 60px;
         height: 60px;
@@ -193,7 +239,7 @@
         top: 0;
         right: 0;
 
-        &:before{
+        &:before {
             width: 60px;
             height: 60px;
 
@@ -209,7 +255,7 @@
             transition-timing-function: swing;
         }
 
-        .icon{
+        .icon {
             width: 30px;
             height: 4px;
 
@@ -250,7 +296,7 @@
         }
     }
 
-
+    // Nav
 
     .nav {
         position: absolute;
