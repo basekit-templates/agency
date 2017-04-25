@@ -46,6 +46,8 @@
         z-index: 9999;
         @media @bp-global-small {
             padding: 0px 20px 0px 20px;
+            font-size: bkscale(@font__h3--font-size, 0.9);
+            line-height: bkscale(@font__h3--line-height, 0.9);
         }
     }
 
@@ -186,36 +188,5 @@
         .widget__signupform .form-group:first-child {
             margin-bottom: 20px;
         }
-    }
-}
-
-// 4 columns
-// ------------------------------
-
-
-.columns-four-first,
-.columns-four-second,
-.columns-four-third,
-.columns-four-fourth,
-.columns-three-left,
-.columns-three-right,
-.columns-three-middle {
-
-    // Legend
-
-    .label {
-
-    }
-
-    // Form Body
-
-    .widget__signupform .form-body {
-        display: block;
-    }
-
-    // First Form Group
-
-    .widget__signupform .form-group:first-child {
-        margin-bottom: 20px;
     }
 }

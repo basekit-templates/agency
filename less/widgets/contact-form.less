@@ -88,6 +88,10 @@
         width: 100%;
         padding: 15px 40px 0px 40px;
         z-index: 9999;
+        @media @bp-global-small {
+            font-size: bkscale(@font__h3--font-size, 0.9);
+            line-height: bkscale(@font__h3--line-height, 0.9);
+        }
         @media @mobile {
             padding: 0 20px 0 20px;
         }

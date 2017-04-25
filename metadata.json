@@ -200,7 +200,7 @@
         "slideshow": {
             "color__slideshow-caption--background": "#26292f",
             "color__slideshow-title--text" : "#fff",
-            "color__slideshow-description--text" : "#bebebe"
+            "color__slideshow-description--text" : "#fff"
         },
         "feature": {
             "color__feature--background" : "@color-swatch3",

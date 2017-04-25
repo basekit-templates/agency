@@ -333,14 +333,16 @@
 
 	.button {
 		opacity: .4;
-		background-color: @color__container--background;
+		background-color: @color__slideshow-title--text;
+		border-left: 0;
 	}
 
 	// Selected Button
 
 	&.selected .button {
 		opacity: 1;
-		background-color: @color__container--background;
+		background-color: @color__slideshow-title--text;
+		border-left: 0;
 	}
 }
 
@@ -406,7 +408,8 @@
 		text-indent: -320%;
 		border-radius: 7px;
 		padding: 0;
-		background-color: @color__button--background--hover!important;
+		background-color: @color__slideshow-title--text;
+		border-left: 0;
 
 		@media @bp-global-small {
 			width: 8px;

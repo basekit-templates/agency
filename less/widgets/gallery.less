@@ -146,3 +146,36 @@
     font-size: @font__h4--font-size;
     line-height: @font__h4--line-height;
 }
+
+.responsivecolumns {
+
+
+    .gallery__gallery-item {
+        width: 49%!important;
+    }
+
+    // 4 columns
+    // ------------------------------
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        .gallery__gallery-item {
+            width: 100%!important;
+        }
+
+        .gallery__figure {
+            &:hover {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.gallery__gallery-item
