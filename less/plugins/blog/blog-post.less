@@ -7,6 +7,13 @@
     position: relative;
 }
 
+.blogpost__post-body {
+    height: 600px;
+    @media @bp-global-small {
+        height: 100%;
+    }
+}
+
 .blogpost__post-image {
     position: absolute;
     right: 0;
@@ -16,6 +23,7 @@
     @media @bp-global-small {
         max-width: 100%;
         margin-left: 0;
+        position: relative;
     }
 }
 
@@ -40,9 +48,10 @@
     max-width: 35%;
     position: absolute;
     top: 320px;
-        @media @bp-global-small {
+    @media @bp-global-small {
         max-width: 100%;
         margin-left: 0;
+        position: relative;
     }
 }
 

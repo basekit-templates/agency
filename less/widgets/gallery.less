@@ -9,17 +9,6 @@
     }
 }
 
-// Homepage Gallery Item
-.gallery__gallery-item {
-    position: relative;
-    width: 50%;
-    margin-bottom: 0;
-    // Display 100% at mobile
-    @media @mobile {
-        width: 100%;
-    }
-}
-
 // Gallery Image
 .gallery__image-link {
     display: block;
@@ -60,10 +49,8 @@
     width: 32%;
     margin-bottom: 2%;
     overflow: hidden;
-    // Display 100% at mobile
-    @media @mobile {
-        width: 100%;
-        margin-bottom: 4%;
+    @media (max-width: 1200px) {
+        width: 49%;
     }
 }
 
@@ -126,6 +113,10 @@
         margin-top: -38px;
         width: 100%
     }
+
+    @media @bp-global-small {
+        display: none;
+    }
 }
 
 // Show Caption
@@ -139,10 +130,15 @@
     padding-top: 1px;
     color: white;
     font-family: @font__h4--font-family;
-    font-size: @font__h4--font-size;
+    font-size: 16px;
     line-height: @font__h4--line-height;
 }
 
+.gallery__image-description {
+    font-family: @font__h4--font-family;
+    font-size: 14px;
+    line-height: @font__h4--line-height;
+}
 
 
 
