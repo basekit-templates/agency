@@ -10,9 +10,7 @@
     // ------------------------------
     // Product Listing Filters
     // ------------------------------
-    
-    
-    
+
     
     // Product Search in Widget
     // ------------------------------
@@ -22,6 +20,7 @@
         .flex-display(@display: flex);
         .align-content(@align: flex-end);
         .align-items(@align: flex-end);
+
         margin-bottom: 40px;
     
         @media (max-width: 1024px) {
@@ -43,11 +42,11 @@
             }
     
             @media (max-width: 1024px) {
-                padding: 20px 40px 10px;
+                padding: 20px 0px 10px;
             }
     
             @media @bp-global-small {
-                padding: 14px 20px;
+                padding: 0;
             }
         }
     }
@@ -397,40 +396,22 @@
 // ------------------------------
 
 
-// 4 Columns
+.product-item {
+    width: 31%;
+    margin: 0;
+    margin-right: 2%;
 
-@media @bp-global-large {
+    /*&:nth-child(3n+0) {
+        margin-right: 0;
+    }*/
 
-    // Product Item
-
-    .product-item {
-        width: 31%;
-        margin: 0;
-        margin-right: 2%;
-    }
-}
-
-
-// 2 Columns
-
-@media @bp-global-small {
-
-    // Product Item
-
-    .product-item {
+    @media @bp-global-small {
         width: 48%;
         margin-right: 2%;
     }
-}
+    // 1 Column
 
-
-// 1 Column
-
-@media @mobile {
-
-    // Product Item
-
-    .product-item {
+    @media @mobile {
         width: 100%;
         margin: 0;
     }

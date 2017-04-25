@@ -202,9 +202,11 @@ body {
             .account-name, 
             .tweet-content a, 
             .tweet-metadata a,
-            .tweet-metadata .via  {
+            .tweet-metadata .via,
+            .timestamp  {
                 color: white!important;
             }
+
         
         }
 
@@ -500,6 +502,10 @@ body {
     background-color: @color__header--background;
     min-height: auto;
     z-index: 99;
+
+    .main-content {
+        top: -35px;
+    }
 
 
     // Flex Item
