@@ -7,6 +7,18 @@
     position: relative;
 }
 
+.blogpost__post-title {
+    @media @bp-global-small {
+        font-size: bkscale(@font__h1--font-size, 0.8);
+        line-height: bkscale(@font__h1--line-height, 0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__h1--font-size, 0.7);
+        line-height: bkscale(@font__h1--line-height, 0.7);
+    }
+}
+
+
 .blogpost__post-body {
     height: 600px;
     @media @bp-global-small {
@@ -52,6 +64,7 @@
         max-width: 100%;
         margin-left: 0;
         position: relative;
+        top: 0;
     }
 }
 

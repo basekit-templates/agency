@@ -204,7 +204,7 @@
         },
         "feature": {
             "color__feature--background" : "@color-swatch3",
-            "color__feature-content--background": "fade(@color-swatch3,90%)",
+            "color__feature-content--background": "@color-swatch3",
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "44px",
             "font__feature-headline--font-weight" : "700",
