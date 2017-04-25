@@ -193,7 +193,7 @@ body {
         .twitter .tweet-item .tweet-content a, 
         .twitter .tweet-item .tweet-metadata a,
         .tweet-metadata .via  {
-            color: white;
+            color: white!important;
         }
     
 
@@ -374,7 +374,7 @@ body {
         margin-top: 80px;
         top: 0;
         .container {
-            padding-top: 2%;
+            padding: 2% 0;
             background-color: @color__container--background;
         }
         @media @bp-global-small {
@@ -487,7 +487,7 @@ body {
     position: relative;
     z-index: inherit;
     width: 100%;
-    background-color: @color__feature-content--background;
+    background-color: @color__header--background;
     min-height: auto;
     z-index: 99;
 
@@ -641,6 +641,11 @@ body {
     .social-item {
         margin-right: 0;
         margin-bottom: 0;
+    }
+
+    @media @bp-global-small {
+        padding: 25px 3%;
+        text-align: center;
     }
 }
 
