@@ -8,20 +8,26 @@
 }
 
 .blogpost__post-image {
+    position: absolute;
+    right: 0;
+    height: 300px;
+    width: 100%;
     max-width: 35%;
-    margin-left: 65%;
     @media @bp-global-small {
         max-width: 100%;
         margin-left: 0;
     }
 }
 
+.blogpost__image-link {
+    height: 300px;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+}
+
 .blogpost__post-content {
-    position: absolute;
-    left: 0;
     max-width: 60%;
-    top: 0;
-    margin: 0;
         @media @bp-global-small {
         max-width: 100%;
         position: relative;
@@ -32,10 +38,16 @@
 .blogpost__post-footer {
     margin-left: 65%;
     max-width: 35%;
+    position: absolute;
+    top: 320px;
         @media @bp-global-small {
         max-width: 100%;
         margin-left: 0;
     }
+}
+
+.blogpost__image {
+    display: none;
 }
 
 .blogpost {
