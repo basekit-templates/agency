@@ -94,7 +94,7 @@ body {
         margin: 0 auto;
         padding-left: 10%;
         padding-right: 10%;
-        background-color: @color__feature-content--background;
+        background-color: @color__feature--background;
         max-width: 100%;
         @media @bp-1300px { 
             padding: 7% 40px 0;
@@ -130,15 +130,11 @@ body {
     &:before {
         content: "";
         display: block;
-        background: -webkit-gradient(linear,left top,left bottom,from(@color__feature-content--background),to(@color-swatch3));
-        background: -webkit-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
-        background: -moz-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
-        background: -ms-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
-        background: -o-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
         -webkit-transform: skewY(-2deg);
         -ms-transform: skewY(-2deg);
         transform: skewY(-2deg);
         height: 90px;
+        background-color: @color__feature-content--background;
         position: absolute;
         left: 0;
         right: 0;
