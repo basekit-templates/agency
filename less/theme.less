@@ -169,34 +169,44 @@ body {
     .flex-order(@order: 1);
     .flex(1 1 33.3%);
     .align-self(@align: auto);
-    margin-right: 80px;
 
+    margin-right: 80px;
     background-color: @color__feature--background;
     z-index: 3;
+
+    &:last-child {
+        margin-right: 0;
+    }
 
     h1, h2, h3, h4, h5, p, a, span {
         color: white;
     }
 
-    // Twitter 
-    .twitter .tweet-item {
-        background-color: transparent;
-        border-left: 0;
-        padding: 0;
-        margin-bottom: 0;
+    // Twitter
+    .twitter {
 
-        .twitter .tweet-wrap {
+        .tweet-item {
+            background-color: transparent;
+            border-left: 0;
             padding: 0;
-        }
-
-        .account-name, 
-        .twitter .tweet-item .tweet-content a, 
-        .twitter .tweet-item .tweet-metadata a,
-        .tweet-metadata .via  {
-            color: white!important;
-        }
+            margin-bottom: 0;
     
-
+            .tweet-wrap {
+                padding: 0;
+                p {
+                    font-size: 16px;
+                    color: white!important;
+                }
+            }
+    
+            .account-name, 
+            .tweet-content a, 
+            .tweet-metadata a,
+            .tweet-metadata .via  {
+                color: white!important;
+            }
+        
+        }
 
     }
 
