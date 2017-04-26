@@ -39,14 +39,6 @@
     }
 }
 
-.navigation-item .item-name {
-    &:hover {
-        &:before {
-            transform: scaleX(1);
-        }
-    }
-}
-
 
 // Navigation Children
 // -----------------------------
@@ -71,7 +63,10 @@
     padding: 8px 20px;
 
     &:hover {
-        color: @color__navigation--text--selected;
+        color: @color__navigation--text;
+        &:before {
+            transform: scaleX(1);
+        }
     }
 
     @media @bp-global-small {
