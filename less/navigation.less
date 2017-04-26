@@ -189,22 +189,22 @@
         .page-content {
             transform: scale(0.8, 0.8);
         }
-        .nav{
+        .nav {
             -webkit-transform: translateY(0);
         }
-        .nav-toggle{
+        .nav-toggle {
             box-shadow: none;
-            &:before{
+            &:before {
                 width: 1200px;
                 height: 1200px;
                 background-color: fade(@color__navigation-list--background, 95%);
             }
-            .icon{
+            .icon {
                 width: 0;
-                &:before{
+                &:before {
                     transform: translateY(9px) rotate(45deg); 
                 }
-                &:after{
+                &:after {
                     transform: translateY(-9px) rotate(-45deg);
                 }
             }
@@ -217,6 +217,10 @@
 
     body.nav-open {
         position: fixed;
+        overflow: hidden;
+        width:100%;
+        left:0;
+        right:0;
     }
 
     // Navigation Toggle
@@ -270,7 +274,7 @@
             transiting-timing-function: swing;
 
             &:before,
-            &:after{
+            &:after {
                 width: 30px;
                 height: 4px;
                 background-color: white;
@@ -285,11 +289,11 @@
                 transiting-timing-function: swing;
             }
 
-            &:before{
+            &:before {
                 top: -9px;
             }
 
-            &:after{
+            &:after {
                 top: 9px;
                 margin-left: 0;
             }
@@ -314,11 +318,11 @@
         overflow: scroll;
         visibility: hidden;
 
-        ul{
-            li{
+        ul {
+            li {
                 list-style: none;
 
-                a{
+                a {
                     display: block;
                     padding: 10px 0;
                     text-align: center;
@@ -330,13 +334,13 @@
                 }
             }
 
-            &:hover{
-                li{
-                    a{
+            &:hover {
+                li {
+                    a {
                         opacity: 0.5;
                     }
 
-                    &:hover{
+                    &:hover {
                         a{
                             opacity: 1;
                         }
