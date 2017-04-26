@@ -114,6 +114,7 @@ body {
     }
 }
 
+// Feature Bottom Info
 .home-flex {
     .flex-display(@display: flex);
     .align-items(@align: center);
@@ -155,7 +156,7 @@ body {
     }
 }
 
-
+// Home Flex Items
 .home-flex-item {
     .flex-order(@order: 1);
     .flex(1 1 33.3%);
@@ -285,7 +286,7 @@ body {
 
 .page--default {
     .template-header {
-        background-color: @color__feature-content--background;
+        background-color: fade(@color__feature-content--background 90%);
         position: relative;
         padding: 30px 10% 60px;
         z-index: 0;
@@ -436,6 +437,9 @@ body {
 
     // Flex Item
     .flex-item {
+        .flex-display;
+        .flex(1 1 auto);
+        
         &:first-child {
             min-width: 200px;
         }
@@ -466,7 +470,7 @@ body {
 
 // For home page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-logo {
-    background-color: @color-swatch3;
+    background-color: @color__feature-content--background;
     position: relative;
 }
 
@@ -477,7 +481,12 @@ body {
 
 // For home page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
-    background-color: @color-swatch3;
+    background-color: @color__feature-content--background;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .main-content {
+    top: -55px;
 }
 
 
@@ -495,16 +504,6 @@ body {
 
     .main-content {
         top: -35px;
-    }
-
-
-    // Flex Item
-    @media @mobile {
-        .flex-item:first-child,
-        .flex-item:last-child {
-            background-color: darken(@color__container--background, 4%);
-            border-bottom: 1px solid darken(@color__container--background, 10%);
-        }
     }
 
     // Profile Widget

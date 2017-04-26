@@ -21,6 +21,13 @@
     .twitter__avatar-image {
         display: none;
     }
+
+    .twitter__avatar {
+        @media @bp-global-small {
+            float: left;
+        }
+    }
+
     .tweet-item {
         width: 100%;
         background-color: transparent;
@@ -461,17 +468,15 @@
     input[type="email"] {
         height: 53px;
     }
-    .signupform__button {
-        @media @mobile {
-            padding: 5px 20px!important;
-        }
-    }
     .profile {
         h1, h2, h3, h4, p, a, span {
             color: lighten(@color__footer--background,20%);
         }
         .legend {
             color: white;
+            @media @bp-global-small {
+                text-align: left;
+            }
         }
     }
     .tweet-content a {
