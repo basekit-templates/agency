@@ -214,7 +214,8 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing",
             "color__feature-strapline--text" : "#fff",
             "color__feature-button--text" : "@color-swatch3",
-            "color__feature-button--background" : "@color-swatch4"
+            "color__feature-button--background" : "#eee",
+            "color__feature-button--background--hover" : "@color-swatch3"
         },
         "twitter": {
             "color__twitter-item--background": "#eee",
