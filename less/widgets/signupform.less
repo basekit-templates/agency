@@ -74,7 +74,7 @@
 
         @media @bp-global-small {
             width: 100%;
-            padding: 50px 30px 30px 30px;
+            padding: 40px 20px 30px 20px;
         }
         @media @mobile {
             display: block;
@@ -124,9 +124,6 @@
 
     .form-group:last-of-type {
         margin: 0;
-        @media @bp-global-small {
-            display: block;
-        }
     }
 
     .button {
@@ -179,6 +176,10 @@
 
         .widget__signupform {
             margin-top: 60px;
+        }
+
+        .widget__signupform:before {
+            margin-top: -30px;
         }
     
         // Form Body
