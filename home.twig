@@ -10,50 +10,13 @@
 	<!-- Zone Content -->
     <div id="main-scroll" class="main-content">
 
-        <div class="container">
 
-            <div class="home-flex">
+        <div class="main-zone">
 
-                <div class="home-flex-item">
-                    {{widget('content', 'hometitle', {
-                        content: '<h4>Commodo Nibh</h4>'
-                    })|raw}}
-                    {{widget('content', 'homecontent', {
-                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nec eleifend diam mollis eu.</p>'
-                    })|raw}}
-                </div>
-        
-                <div class="home-flex-item">
-                    {{widget('content', 'hometitle2', {
-                        content: '<h4>Mauris Blandit</h4>'
-                    })|raw}}
-                    {{widget('content', 'homecontent2', {
-                        content: '<p>Aenean auctor convallis libero, vitae dignissim lectus lobortis id.</p>'
-                    })|raw}}
-                    
-                </div>
-        
-                <div class="home-flex-item">
-        
-                    {{widget('profile', 'homesignup', {
-                        'profileType':'form'
-                    })|raw}}
-                    
-                </div>
-
-            </div> 
-
-            </div>
-
-                <div class="main-zone">
-
-                    {{zone('main')|raw}}
-
-                </div>
-
-            </div>
+            {{zone('main')|raw}}
 
         </div>
+
 
     </div>
 

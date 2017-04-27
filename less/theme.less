@@ -84,18 +84,19 @@ body {
 }
 
 // Main
-.main-content {
+.hero {
     position: relative;
     background-color: @color__container--background;
-    top: -75px;
 
-    .container {
+    .container-slant {
         padding-top: 5%;
+        position: relative;
         margin: 0 auto;
         padding-left: 10%;
         padding-right: 10%;
         background-color: @color__feature-content--background;
         max-width: 100%;
+        top: -75px;
         @media @bp-1300px { 
             padding: 7% 40px 0;
         }
@@ -103,9 +104,14 @@ body {
             padding-left: 4%;
             padding-right: 4%;
         }
+        @media @mobile {
+            .flex-order(3);
+            margin: 0;
+        }
     }
 
 }
+
 
 .main-zone {
     padding: 2% 10%;
@@ -142,6 +148,9 @@ body {
         top: 30px;
         z-index: 2;
         box-shadow: 0 -7px 20px rgba(0, 0, 0, .05);
+        @media @bp-1300px {
+            top: 10px;
+        }
         @media @bp-global-small {
             height: 26px;
             top: 62px;
@@ -313,7 +322,7 @@ body {
             }
         }
         @media @bp-global-small {
-            padding: 40px 40px 50px;
+            padding: 20px 20px 50px;
         }
         .flex-item:first-child {
             .flex-display(@display: flex);
@@ -401,9 +410,15 @@ body {
 // #Header
 // ------------------------------
 
-.template-header {
+[data-widget-type="feature"] + .template-header {
+    background: transparent;
     position: absolute;
     top: 0;
+}
+
+.template-header {
+    background-color: @color__header--background;
+    position: relative;
     z-index: 12;
     max-width: 100%;
     padding: 20px 10%;
@@ -481,11 +496,43 @@ body {
 // For home page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
     background-color: @color__feature-content--background;
+    position: relative;
 }
 
 // For home page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .main-content {
     top: -55px;
+}
+
+[data-widget-type="feature"]+ .template-header + .container-slant {
+    padding-top: 5%;
+    top: -75px;
+
+    .home-flex:before {
+        display: block;
+    }
+
+    .home-flex-item:first-child {
+        @media @mobile {
+            padding-top: 70px;
+        }
+    }
+}
+
+[data-widget-type="feature"].bk-tpl-hidden + .template-header + .container-slant,
+.template-header + .container-slant {
+    padding-top: 2%;
+    top: 0;
+
+    .home-flex:before {
+        display: none;
+    }
+
+    .home-flex-item:first-child {
+        @media @mobile {
+            padding-top: 25px;
+        }
+    }
 }
 
 
