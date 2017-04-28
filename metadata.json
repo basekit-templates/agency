@@ -26,9 +26,9 @@
        "title": "Sanchez",
         "font1": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "44px",
+            "font-size": "40px",
             "font-weight": "400",
-            "line-height": "54px",
+            "line-height": "50px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -88,7 +88,7 @@
         "font8": {
             "font-family": "\"Sanchez\", Georgia, serif",
             "font-size": "44px",
-            "font-weight": "700",
+            "font-weight": "400",
             "line-height": "54px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
