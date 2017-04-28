@@ -424,9 +424,23 @@
 // ------------------------------
 
 
+// Image Link
+
+.product-item-image .image-link {
+    background-color: transparent;
+    height: 300px;
+    line-height: 300px;
+    @media @mobile {
+        line-height: 1;
+        height: auto;
+    }
+}
+
 .product-item-image  {
     background-color: transparent;
     width: auto;
+    height: 100%;
+    line-height: 100%;
     @media @mobile {
         line-height: 1;
         height: auto;
@@ -437,19 +451,6 @@
         @media @mobile {
             max-height: 200px;
         }
-    }
-}
-
-
-// Image Link
-
-.product-item-image .image-link {
-    background-color: transparent;
-    height: 300px;
-    line-height: 300px;
-    @media @mobile {
-        line-height: 1;
-        height: auto;
     }
 }
 
