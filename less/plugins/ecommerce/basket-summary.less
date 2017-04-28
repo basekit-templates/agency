@@ -39,6 +39,7 @@
 
 
 .summary-title {
+    text-align: left;
     @media @bp-global-medium {
         font-size: bkscale(@font__h2--font-size, 0.9);
         line-height: bkscale(@font__h2--line-height, 0.9);
@@ -180,10 +181,16 @@
     .cell--total {
         text-align: right;
         padding: 0 16px;
+        @media @bp-global-small {
+            text-align: left;
+        }
     }
     .cell--price {
         padding: 0 0 0 16px;
         text-align: right;
+        @media @bp-global-small {
+            text-align: left;
+        }
     }
 
 
@@ -196,6 +203,9 @@
     .cell--order-total {
         text-align: right;
         background-color: #fff;
+        @media @bp-global-small {
+            text-align: left;
+        }
     }
 
 
@@ -298,7 +308,7 @@
     text-align: right;
 
     @media @basketsummary-medium, @mobile {
-        text-align: center;
+        text-align: left;
     }
 
 }
@@ -344,6 +354,9 @@
             margin-bottom: 10px;
             clear: both;
             border-bottom: none;
+            @media @bp-global-small {
+                background-color: transparent;
+            }
         }
 
         // Cell Image
@@ -411,7 +424,7 @@
         // Order Total
 
         .order-total {
-            text-align: center;
+            text-align: left;
         }
 
         // Cell Price, Cell Total
