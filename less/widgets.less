@@ -294,19 +294,6 @@
     line-height: @font__h4--line-height;
     letter-spacing: @font__h4--letter-spacing;
     color: @color__feature-strapline--text;
-
-    @media @bp-global-medium {
-        font-size: 36px;
-        line-height: 46px;
-    }
-    @media @bp-global-small {
-        font-size: 28px;
-        line-height: 32px;
-    }
-    @media @mobile {
-        font-size: 22px;
-        line-height: 20px;
-    }
 }
 
 
@@ -374,13 +361,11 @@ hr.rule {
     .columns-three-right,
     .columns-three-middle {
         
-    .responsiveslideshow__image-title, 
-    .imagewidget__image-title,
-    .responsiveslideshow__image-description, 
-    .imagewidget__image-description {
-        display: none;
-    }
+        .responsiveslideshow__image-title
+        .responsiveslideshow__image-description {
+            display: none;
+        }
 
-}
+    }
 
 }
