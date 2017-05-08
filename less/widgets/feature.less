@@ -106,13 +106,35 @@
     padding: 150px 10% 60px;
     vertical-align: middle;
     height: 700px;
-    background-color: fade(@color__feature-content--background,90%);
     @media @bp-1300px { 
         padding: 150px 40px 60px;
     }
     @media @bp-global-small {
         padding: 20px 4%;
         height: 600px;
+    }
+}
+
+.feature {
+    .background-image {
+        display: table;
+        width: 100%;
+        background-size: cover;
+        // Overlay
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            background: @color__feature-content--background; /* fallback for old browsers */
+
+            opacity: 0.8;
+        }
     }
 }
 
