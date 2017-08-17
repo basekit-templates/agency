@@ -58,9 +58,9 @@
         },
         "font5": {
             "font-family": "\"Sanchez\", Georgia, serif",
-            "font-size": "16px",
+            "font-size": "17px",
             "font-weight": "400",
-            "line-height": "27px",
+            "line-height": "32px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
@@ -166,10 +166,10 @@
         },
         "navigation": {
             "font__navigation--font-family": "@font-swatch6-font-family",
-            "font__navigation--font-size": "18px",
-            "font__navigation--font-weight": "300",
-            "font__navigation--line-height": "26px",
-            "font__navigation--letter-spacing": "2px",
+            "font__navigation--font-size": "17px",
+            "font__navigation--font-weight": "400",
+            "font__navigation--line-height": "28px",
+            "font__navigation--letter-spacing": "1px",
             "color__navigation--text": "#fff",
             "color__navigation-list--background" : "@color-swatch3",
             "color__navigation-item--background--selected": "@color-swatch3"

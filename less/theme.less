@@ -97,7 +97,7 @@ body {
         background-color: @color__feature--background;
         max-width: 100%;
         top: -75px;
-        @media @bp-1300px { 
+        @media @bp-1300px {
             padding: 7% 40px 0;
         }
         @media @bp-global-small {
@@ -126,7 +126,7 @@ body {
     .align-items(@align: center);
 
     margin: 0px auto;
-    padding: 0 0 3%;
+    padding: 0;
     h1, h2, h3, h4, p, a {
         color: white;
     }
@@ -172,6 +172,7 @@ body {
     .align-self(@align: auto);
 
     margin-right: 80px;
+    padding-bottom: 3%;
     z-index: 3;
 
     &:last-child {
@@ -194,7 +195,7 @@ body {
             border-left: 0;
             padding: 0;
             margin-bottom: 0;
-    
+
             .tweet-wrap {
                 padding: 0;
                 p {
@@ -202,16 +203,16 @@ body {
                     color: white!important;
                 }
             }
-    
-            .account-name, 
-            .tweet-content a, 
+
+            .account-name,
+            .tweet-content a,
             .tweet-metadata a,
             .tweet-metadata .via,
             .timestamp  {
                 color: white!important;
             }
 
-        
+
         }
 
     }
@@ -225,7 +226,7 @@ body {
         line-height: 24px;
     }
 
-    // Social 
+    // Social
 
     .social-link {
         background-color: transparent;
@@ -301,32 +302,32 @@ body {
     .template-header {
         background-color: fade(@color__feature-content--background 90%);
         position: relative;
-        padding: 30px 10% 60px;
+        padding: 30px 10% 0;
         z-index: 0;
         z-index: 99;
         &:before {
             content: "";
             display: block;
-            background: -webkit-gradient(linear,left top,left bottom,from(@color__feature-content--background),to(@color__feature-content--background));
-        background: -webkit-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
-        background: -moz-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
-        background: -ms-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
-        background: -o-linear-gradient(top,@color__feature-content--background,@color__feature-content--background);
-            -webkit-transform: skewY(-2deg);
-            -ms-transform: skewY(-2deg);
-            transform: skewY(-2deg);
+            background: -webkit-gradient(linear,left top,left bottom,from(fade(@color__feature-content--background 90%)),to(@color__feature-content--background));
+            background: -webkit-linear-gradient(top,fade(@color__feature-content--background 90%),@color__feature-content--background);
+            background: -moz-linear-gradient(top,fade(@color__feature-content--background 90%),@color__feature-content--background);
+            background: -ms-linear-gradient(top,fade(@color__feature-content--background 90%),@color__feature-content--background);
+            background: -o-linear-gradient(top,fade(@color__feature-content--background 90%),@color__feature-content--background);
+            -webkit-transform: skewY(-1deg);
+            -ms-transform: skewY(-1deg);
+            transform: skewY(-1deg);
             height: 90px;
             position: absolute;
             left: 0;
             right: 0;
-            bottom: -45px;
+            bottom: -40px;
             @media @bp-global-small {
                 height: 40px;
                 bottom: -20px;
             }
         }
         @media @bp-global-small {
-            padding: 20px 20px 50px;
+            padding: 20px 20px 0;
         }
         .flex-item:first-child {
             .flex-display(@display: flex);
@@ -431,7 +432,7 @@ body {
     @media @bp-global-below-fullwidth {
         width: 100%;
     }
-    @media @bp-1300px { 
+    @media @bp-1300px {
         padding: 20px 40px;
     }
     @media @bp-global-small {
@@ -468,11 +469,6 @@ body {
             background-color: transparent;
             border: 0;
             display: inline-block;
-
-            &:first-child,
-            &:last-child {
-
-            }
         }
     }
 }
@@ -537,6 +533,10 @@ body {
             padding-top: 25px;
         }
     }
+}
+
+.hero + .main-content {
+    margin-top: -75px;
 }
 
 
@@ -681,7 +681,7 @@ body {
     }
 }
 
-// Footer content 
+// Footer content
 .footer-content-1 {
     margin-bottom: 10px;
 }

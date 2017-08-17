@@ -21,6 +21,8 @@
     cursor: pointer;
     background-color: transparent;
     z-index: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .navigation-item .item-name {
@@ -29,8 +31,8 @@
         position: absolute;
         z-index: -1;
         top: 0;
-        left: 0;  
-        right: 0;  
+        left: 0;
+        right: 0;
         bottom: 0;
         background: @color__navigation-list--background;
         transform: scaleX(0);
@@ -196,7 +198,7 @@
             .icon {
                 width: 0;
                 &:before {
-                    transform: translateY(9px) rotate(45deg); 
+                    transform: translateY(9px) rotate(45deg);
                 }
                 &:after {
                     transform: translateY(-9px) rotate(-45deg);
